@@ -1,0 +1,77 @@
+<h1>VITAP - MTSE Student Registration</h1>
+<form class="all" method="post" action="/student/add">
+    <label>Student Name:</label><br>
+    <input type = "text" name = "student_name">
+    <br>
+    <label>Registration Number:</label><br>
+    <input type = "text" name = "reg_number">
+    <br>
+    <label>Gender:</label><br>
+    <input type = "text" name = "gender">
+    <br>
+    <label>Residence:</label><br>
+    <input type = "text" name = "residence">
+    <br>
+    <label>YOB:</label><br>
+    <input type = "text" name = "yob">
+    <br>
+    <label>POB:</label><br>
+    <input type = "text" name = "pob">
+    <br>
+    <br>
+    <input type="submit" value="Register">
+
+</form>
+
+
+<h1>VITAP - MTSE Delete a student</h1>
+<form method="post" action="/student/delete">
+    <label>Registration Number:</label><br>
+    <input type = "text" name = "reg_number">
+    <br>
+    <br>
+    <input type="submit" value="Delete">
+</form>
+
+<h1>VITAP - MTSE Update a student</h1>
+<form method="post" action="/student/update">
+    <label>Registration Number:</label><br>
+    <input type = "text" name = "reg_number">
+    <br>
+    <label>Student Name:</label><br>
+    <input type = "text" name = "student_name">
+    <br>
+    <br>
+    <input type="submit" value="Update">
+</form>
+
+<h1>VITAP - MTSE Register Subject</h1>
+<form method="post" action="/student/regsub">
+    <label>Registration Number:</label><br>
+    <input type = "text" name = "reg_number">
+    <br>
+    <label>Subject:</label><br>
+    <input type = "text" name = "subject">
+    <br>
+    <br>
+    <input type="submit" value="Register">
+</form>
+
+
+
+
+<h1>VITAP - MTSE Student Names</h1>
+<ul>
+<% student.forEach(function(s){ %>
+    <li><%= s.name %> - <%= s.reg%></li>
+
+<% }) %>
+</ul>
+
+
+<h1>VITAP - MTSE Students by State Wise</h1>
+<ul>
+<% ap.forEach(function(s1){ %>
+    <li><%= s1.name %> - <%= s1.pob %></li> 
+<% }) %>
+</ul>
